@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html::-webkit-scrollbar {
+    width: 0.7vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(133, 186, 255, 0.5);
+    border-radius: 100vw;
+}
+html::-webkit-scrollbar-thumb :hover {
+    background-color: rgb(133, 186, 255);
+    border-radius: 100vw;
+}
+
+/*html::-webkit-scrollbar-track {
+    background-color: rgba(224, 224, 224, 0.5);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+}
+*/
+
+body {
+    /* background-color: #03396c; */
+    background-image: url(images/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.invisible-element {
+    width: 100%;
+    height: 170px;
+}
+
+nav {
+    display: inline-flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+    width: 90%;
+}
+
+nav a img {
+    width: 35px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+li a {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #6497b1;
+    border-radius: 4px;
+    font-size: medium;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+li a:hover{
+    background-color: #005b96;
+    border: #142236;
+}
+
+li a.active {
+    background-color: #005b96;
+}
+
+.content-background {
+    width: 70%;
+    margin: 0 0 200px 15%;
+    border-radius: 50px;
+    background-color: #b3cde0;
+    height: 500px;
+    padding-top: 80px;
+    color: #03396c;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.text-box {
+    margin-left: 5%;
+}
+
+.skill-box {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skill-box-column p {
+    margin-bottom: 75px;
+}
+
+
+/*  Projecty */
+.content-background-grid {
+    width: 98%;
+    margin: 0 0 200px 1%;
+    border-radius: 50px;
+    background-color: #b3cde0;
+    height: 1000px;
+    color: #03396c;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 5px;
+}
+
+.grid-item {
+    display: grid;
+
+    background-color: white;
+}
+
+
+.footer-box {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.footer-box a {
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+footer {
+    position: relative;
+    background-color: #142236;  /* #011f4b */
+    width: 100%;
+    height: 200px;
+    margin: auto 0px 0px 0px;
+}
