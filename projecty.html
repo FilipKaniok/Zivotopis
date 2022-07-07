@@ -6,6 +6,7 @@
         create_grid_item();
       });
 
+      //PROJECT   grid item factory
       function create_grid_item() {
         //Vytváření nového elementu v grid-item s classname = item      ve kterém budou následujcí elementy
         const plus = document.getElementById("new-grid-item");
@@ -16,20 +17,33 @@
         gridContainer.appendChild(plus);
         gridContainer.insertBefore(newDiv, plus);
 
-        //Vytváření nového elementu v item s classname = photo      ve kterém bude photo
-        const newPhoto = document.createElement("div");
-        newPhoto.className = "photo";
+        //Vytváření nového elementu v item s id = photo      ve kterém bude photo
+        const newPhoto = document.createElement("input");
+        newPhoto.type = "file";
+        newPhoto.id = "photo";
         newDiv.appendChild(newPhoto);
 
-        //Vytváření nového elementu v item s classname = project-info       ve kterém bude krátký popis
+        //Vytváření nového elementu v item s id = project-info       ve kterém bude krátký popis
         const newProjectInfo = document.createElement("input");
-        newProjectInfo.className = "project-info";
+        newProjectInfo.id = "project-info";
         newDiv.appendChild(newProjectInfo);
 
-        //Vytváření nového elementu v item s classname = description        ve kterém bude něco o kontentu
+        //Vytváření nového elementu v item s id = description        ve kterém bude něco o kontentu
         const newDescription = document.createElement("input");
-        newDescription.className = "description";
+        newDescription.id = "description";
         newDiv.appendChild(newDescription);
+
+        //Vytváření nového tlačítka s id = newdeleteBtn      po zmáčknutí odstraní jeden item z gridu
+        const newDeleteBtn = document.createElement("button");
+        newDeleteBtn.id = "newdeleteBtn";
+        newDeleteBtn.innerHTML = "Delete";
+        newDiv.appendChild(newDeleteBtn);
+
+        //Vytváření nového tlačítka s id = newsaveBtn      po zmáčknutí uloží hodnoty a vytvoří nový item s těmito hodnotami
+        const newSaveBtn = document.createElement("button");
+        newSaveBtn.id = "newsaveBtn";
+        newSaveBtn.innerHTML = "Save";
+        newDiv.appendChild(newSaveBtn);
       }
     </script>
 
