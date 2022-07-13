@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 html::-webkit-scrollbar {
@@ -136,6 +137,38 @@ li a.active {
   grid-row-gap: 25px;
   grid-template-columns: auto auto auto auto;
   padding: 25px;
+}
+
+.filter-container {
+  grid-column: 1 / 5;
+  margin-right: 5vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#select-tag {
+  border-top-left-radius: 100vw;
+  border-bottom-left-radius: 100vw;
+  border-color: rgba(20, 34, 54, 0.6);
+  border-width: 2px;
+  border-right-width: 0.75px;
+  padding: 0.2em;
+  height: 1fr;
+}
+
+#search-bar {
+  border-top-right-radius: 100vw;
+  border-bottom-right-radius: 100vw;
+  border-color: rgba(20, 34, 54, 0.6);
+  border-width: 2px;
+  border-left-width: 0.75px;
+  padding: 0.3em;
+  height: 1fr;
+}
+
+#search-bar:hover::placeholder {
+  color: white;
 }
 
 .item {

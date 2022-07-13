@@ -9,13 +9,16 @@
       //PROJECT   grid item factory
       function create_grid_item() {
         //Vytváření nového elementu v grid-item s classname = item      ve kterém budou následujcí elementy
+        var x = 0;
         const plus = document.getElementById("new-grid-item");
         const gridContainer = document.getElementById("grid-container");
         const newDiv = document.createElement("div");
         newDiv.className = "item";
+        console.log(x);
         gridContainer.appendChild(newDiv);
         gridContainer.appendChild(plus);
         gridContainer.insertBefore(newDiv, plus);
+        var x = x + 1;
 
         //Vytváření nového elementu v item s id = photo      ve kterém bude photo
         const newPhoto = document.createElement("input");
@@ -28,6 +31,10 @@
         newProjectInfo.id = "project-info";
         newDiv.appendChild(newProjectInfo);
 
+        const newTags = document.createElement("input");
+        newTags.id = "tag-name";
+        newDiv.appendChild(newTags);
+
         //Vytváření nového elementu v item s id = description        ve kterém bude něco o kontentu
         const newDescription = document.createElement("input");
         newDescription.id = "description";
@@ -37,13 +44,46 @@
         const newDeleteBtn = document.createElement("button");
         newDeleteBtn.id = "newdeleteBtn";
         newDeleteBtn.innerHTML = "Delete";
+        newDeleteBtn.onclick(delete_project);
         newDiv.appendChild(newDeleteBtn);
 
         //Vytváření nového tlačítka s id = newsaveBtn      po zmáčknutí uloží hodnoty a vytvoří nový item s těmito hodnotami
         const newSaveBtn = document.createElement("button");
         newSaveBtn.id = "newsaveBtn";
         newSaveBtn.innerHTML = "Save";
+        newSaveBtn.onclick(save_project);
         newDiv.appendChild(newSaveBtn);
+      }
+
+      function save_project() {
+        const savedPhoto = document.createElement("img");
+        savedPhoto.type = "file";
+        savedPhoto.id = "photo";
+        savedDiv.appendChild(newPhoto);
+
+        const savedProjectInfo = document.createElement("h3");
+        savedProjectInfo.innerHTML = newProjectInfo.innerHTML;
+        savedProjectInfo.id = "project-info";
+        newDiv.appendChild(newProjectInfo);
+
+        const savedDescription = document.createElement("p");
+        savedDescription.innerHTML = newDescription.innerHTML;
+        savedDescription.id = "description";
+        newDiv.appendChild(newDescription);
+
+        const savedDeleteBtn = document.createElement("button");
+        savedDeleteBtn.id = "newdeleteBtn";
+        savedDeleteBtn.innerHTML = "Delete";
+        newDiv.appendChild(newDeleteBtn);
+
+        const newSaveBtn = document.createElement("button");
+        newSaveBtn.id = "newsaveBtn";
+        newSaveBtn.innerHTML = "Save";
+        newDiv.appendChild(newSaveBtn);
+      }
+
+      function delete_project() {
+        var item_array;
       }
     </script>
 
@@ -77,6 +117,12 @@
     </header>
     <div class="content-background-grid">
       <div id="grid-container">
+        <div class="filter-container">
+          <select id="select-tag">
+            <option value="none">none</option>
+          </select>
+          <input type="text" placeholder="search: " id="search-bar" />
+        </div>
         <button onclick="create_grid_item()" id="new-grid-item">+</button>
       </div>
     </div>
