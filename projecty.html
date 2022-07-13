@@ -9,16 +9,13 @@
       //PROJECT   grid item factory
       function create_grid_item() {
         //Vytváření nového elementu v grid-item s classname = item      ve kterém budou následujcí elementy
-        var x = 0;
         const plus = document.getElementById("new-grid-item");
         const gridContainer = document.getElementById("grid-container");
         const newDiv = document.createElement("div");
         newDiv.className = "item";
-        console.log(x);
         gridContainer.appendChild(newDiv);
         gridContainer.appendChild(plus);
         gridContainer.insertBefore(newDiv, plus);
-        var x = x + 1;
 
         //Vytváření nového elementu v item s id = photo      ve kterém bude photo
         const newPhoto = document.createElement("input");
@@ -31,6 +28,7 @@
         newProjectInfo.id = "project-info";
         newDiv.appendChild(newProjectInfo);
 
+        //Vytváření nového elementu v item s id = tag-name       ve kterém budou tag tlačítka
         const newTags = document.createElement("input");
         newTags.id = "tag-name";
         newDiv.appendChild(newTags);
@@ -42,16 +40,16 @@
 
         //Vytváření nového tlačítka s id = newdeleteBtn      po zmáčknutí odstraní jeden item z gridu
         const newDeleteBtn = document.createElement("button");
-        newDeleteBtn.id = "newdeleteBtn";
+        newDeleteBtn.className = "Save-DeleteBtn";
         newDeleteBtn.innerHTML = "Delete";
-        newDeleteBtn.onclick(delete_project);
+        //newDeleteBtn.onclick(delete_project);
         newDiv.appendChild(newDeleteBtn);
 
         //Vytváření nového tlačítka s id = newsaveBtn      po zmáčknutí uloží hodnoty a vytvoří nový item s těmito hodnotami
         const newSaveBtn = document.createElement("button");
-        newSaveBtn.id = "newsaveBtn";
+        newSaveBtn.className = "Save-DeleteBtn";
         newSaveBtn.innerHTML = "Save";
-        newSaveBtn.onclick(save_project);
+        //newSaveBtn.onclick(save_project);
         newDiv.appendChild(newSaveBtn);
       }
 

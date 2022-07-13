@@ -167,17 +167,53 @@ li a.active {
   height: 1fr;
 }
 
-#search-bar:hover::placeholder {
-  color: white;
-}
-
 .item {
   display: grid;
+  grid-row-gap: 5px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 2fr 2fr 2fr 1fr;
   padding: 1vw;
   background-color: white;
   border-radius: 15px;
   border-color: #005b96;
   min-height: 300px;
+}
+
+#photo {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgba(100, 151, 177, 0.7);
+}
+
+#project-info {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgba(100, 151, 177, 0.7);
+}
+
+#tag-name {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgba(100, 151, 177, 0.7);
+}
+
+#description {
+  grid-column: 1 / 4;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgba(100, 151, 177, 0.7);
+}
+
+.Save-DeleteBtn {
+  grid-column: 3;
+  grid-row: 4;
+  border-radius: 100vw;
+  border-width: 1.5px;
+  border-color: rgba(100, 151, 177, 0.7);
+  background-color: rgba(0, 90, 150, 0.5);
+  margin: 0.5vw;
 }
 
 #new-grid-item {
